@@ -6,7 +6,7 @@ create table Task(
    taskStartDate DATETIME,
    taskDueDate DATETIME,
    taskStatus VARCHAR(64) not null,
-   taskPriority VARCHAR(64) not null ,
+   taskPriority VARCHAR(64) not null,
    taskDescription VARCHAR(256),
    primary key(taskId)
 );
