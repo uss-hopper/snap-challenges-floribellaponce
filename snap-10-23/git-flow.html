@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<h2>5 Types of branches</h2>
+<ul>
+	<li><strong>Master branch</strong>-the master branch is the production branch. The code living in the master branch
+		is what the running product has. </li>
+	<li><strong>Release branch</strong>-the release branch is pulled from the master branch. The release branch is the
+		branch where the code is pushed to when ready for release. This is where the code lives before it makes it
+		to production. Additional unit testing is run on code on this branch. </li>
+	<li><strong>Hotfix branch</strong>-the hotfix branch is pulled from master branch. The purpose of the hotfix branch
+		is to fix issues in production in a quick manner without a sprint. This branch is only used it's an occasion
+		of a urgent issue.</li>
+	<li><strong>Develop branch</strong>-the develop branch is pulled from the master branch. The develop branch is the
+		branch where any code that has been developed in the current sprint lives. This is code meant for the next
+		release but is not ready for release yet. </li>
+	<li><strong>Feature branch</strong>-the feature branch is pulled from the development branch. The feature branch
+		is where the development of the code happens. A feature branch is used per feature.  </li>
+</ul>
+<h2>A ticket process</h2>
+<ol>
+	<li>First you will need your ticket for the feature that is being worked on. </li>
+	<li>Checkout master branch.
+		By default you should be on master branch unless if switched to a different branch. </li>
+	<li>Do a git fetch and git pull in order to pull exact code from master into local.</li>
+	<li>Checkout develop branch.</li>
+	<li>Do a git fetch and git pull in order to ensure code on develop branch is up to date with code on master.  </li>
+	<li>Checkout a new branch. The newly created branch is considered a feature branch and will branch out
+		out from develop.  </li>
+	<li>New branch will have the code from develop up to this point</li>
+	<li>Coding can not begin on feature branch. </li>
+	<li>Once feature has been completed and ready to be tested, merge feature branch into development branch. </li>
+	<li>If no merge conflicts occured, code should have successfully joined the code in develop./li>
+	<li>Testing will occur on develop branch.</li>
+	<li>Once feature is verified to be ready for production, develop branch is merged into release branch.</li>
+	<li>Once code is on release branch, additional testing is done to verify code is absolutely ready to be in production.</li>
+	<li>Now release branch will be merged into master branch.</li>
+	<li>Master branch will now have the new code.</li>
+	<li>If any P1 issues occur that NEED to be fixed asap, a new branch is pulled from master branch in order to
+	crate a hotfix branch and fix the code.</li>
+	<li>When code on hotfix branch has been tested and accepted, hotfix branch will be merged into master branch.</li>
+</ol>
+</body>
+</html>
