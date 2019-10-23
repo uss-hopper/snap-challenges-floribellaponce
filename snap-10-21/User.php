@@ -3,7 +3,8 @@
  * This is the information for a User class.
  */
 class User implemnets {
-	use ValidataUuid;
+	private $userId;
+	private $userEmail;
 	/**
 	 * id for this user who owns the account; this is the primary key.
 	 * @var Uuid $userId
