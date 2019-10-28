@@ -404,22 +404,25 @@ class Tweet implements \JsonSerializable {
 	 * gets all tweets by tweet date
 	 *
 	 * @return \SplFixedArray SplFixedArray of tweets found or null if not found
-	 * @param DateTime $tweetDate the date which to search the tweet date 
+	 * @param DateTime $tweetDate the date which to search the tweet date
 	 * @throws \PDOException when mySQL related errors occur
 	 * @throws \TypeError when variables are not the correct data type
 	 */
 	public static function getTweetbyTweetDate(\PDO $pdo): \SplFixedArray {
-		try {
-			$tweetDate = self::validateDateTime($tweetDate);
-		} catch(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
-			throw(new\PDOException($exception->getMessage(), 0, $exception));
-		}
+		$startDateString = $tweetDate->format('Y-m-d') . ' 00:00:00' ;
+		$startDate = new DateTime($startDateString);
+		$endDate = new DateTime($startDateString);
+		$endDate->add(new \DateInterval('P1D'));
+
 		//sql query
-		$query = "SELECT tweetId, tweetProfileId, tweetContent, tweetDate FROM tweet WHERE tweetDate LIKE :tweetDate";
+		$query = "SELECT tweetId, tweetProfileId, tweetContent, tweetDate FROM tweet WHERE tweetDate >= :startDate AND tweetDate < :endDate";
 		$statement = $pdo->prepare($query);
 		//
-		$parameters = ["tweetDate" => $tweetDate->getBytes()];
-		$statement = $pdo->prepare($parameters);
+		$parameters = [
+			"startDate" => $startDate->("Y-m-d H:i:s.u"),
+			"endDate" => $endDate->("Y-m-d H:i:s.u"),
+			];
+		$statement -> execute($parameters);
 		//building an array of tweets
 		$tweets = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
