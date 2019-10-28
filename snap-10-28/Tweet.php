@@ -404,6 +404,7 @@ class Tweet implements \JsonSerializable {
 	 * gets all tweets by tweet date
 	 *
 	 * @return \SplFixedArray SplFixedArray of tweets found or null if not found
+	 * @param DateTime $tweetDate the date which to search the tweet date 
 	 * @throws \PDOException when mySQL related errors occur
 	 * @throws \TypeError when variables are not the correct data type
 	 */
@@ -418,7 +419,7 @@ class Tweet implements \JsonSerializable {
 		$statement = $pdo->prepare($query);
 		//
 		$parameters = ["tweetDate" => $tweetDate->getBytes()];
-		$statement = $pdo->prepare($query);
+		$statement = $pdo->prepare($parameters);
 		//building an array of tweets
 		$tweets = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
