@@ -413,11 +413,27 @@ class Tweet implements \JsonSerializable {
 		} catch(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
 			throw(new\PDOException($exception->getMessage(), 0, $exception));
 		}
+		//sql query
 		$query = "SELECT tweetId, tweetProfileId, tweetContent, tweetDate FROM tweet WHERE tweetDate LIKE :tweetDate";
 		$statement = $pdo->prepare($query);
-
+		//
+		$parameters = ["tweetDate" => $tweetDate->getBytes()];
+		$statement = $pdo->prepare($query);
 		//building an array of tweets
-		$parameters = ["tweetDate" =>]
+		$tweets = new \SplFixedArray($statement->rowCount());
+		$statement->setFetchMode(\PDO::FETCH_ASSOC);
+		while(($row = $statement->fetch()) !== false) {
+			try {
+				$tweet = new Tweet($row["tweetId"], $row["tweetProfileId"], $row["tweetContent"], $row["tweetDate"]);
+				$tweets[$tweets->key()] = $tweet;
+				$tweets->next();
+			} catch(\Exception $exception) {
+				throw(new \PDOException($exception->getMessage(), 0, $exception));
+			}
+			return($tweets);
+		}
+
+
 	}
 
 	/**
