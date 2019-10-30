@@ -1,7 +1,11 @@
-ul {
+
+.my-list {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 .my-item {
