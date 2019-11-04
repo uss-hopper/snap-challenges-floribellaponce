@@ -16,6 +16,19 @@
 	<title> Snap bootstrap challenge </title>
 </head>
 <body>
+<div>
+	<div class="dropdown">
+		<button>Home</button>
+		<button type="button" class="btn btn-link">Link</button>
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Dropdown </button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" href="#">Option 1</a>
+			<a class="dropdown-item" href="#">Option 2</a>
+			<a class="dropdown-item" href="#">Option 3</a>
+		</div>
+	</div>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-3" class="col-xs-1" class="card">
@@ -43,16 +56,14 @@
 			</div>
 		</div>
 	</div>
-</div>
-<div class="container">
 	<div class="row">
 		<div class="col-lg-4">
-			<p>This is a paragraph</p>
+			This is a paragraph
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-lg-4">
-			<p>This is a paragraph</p>
+			This is a paragraph
 		</div>
 	</div>
 	<div class="row">
