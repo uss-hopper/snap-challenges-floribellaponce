@@ -76,13 +76,19 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-4">
-				<p>This is a paragraph</p>
+				<p>This is a paragraph place holder. This section should include a paragraph containing useful infromation needed
+				for the site for users to see. This paragraph will be side by side other paragraphs but will be stacked on top of each
+				other in mobile view.</p>
 			</div>
 			<div class="col-lg-4">
-				<p>This is a paragraph</p>
+				<p>This is a paragraph place holder. This section should include a paragraph containing useful infromation needed
+					for the site for users to see. This paragraph will be side by side other paragraphs but will be stacked on top of each
+					other in mobile view.</p>
 			</div>
 			<div class="col-lg-4">
-				<p>This is a paragraph</p>
+				<p>This is a paragraph place holder. This section should include a paragraph containing useful infromation needed
+					for the site for users to see. This paragraph will be side by side other paragraphs but will be stacked on top of each
+					other in mobile view.</p>
 			</div>
 		</div>
 	</div>
