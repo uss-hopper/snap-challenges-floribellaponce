@@ -43,27 +43,27 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-3" class="card" >
+<div class="container-fluid">
+	<div class="card-deck">
+		<div class="card mb-5">
 			<div class="card-header"> card header 1 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="card">
+		<div class="card border-primary mb-5">
 			<div class="card-header"> card header 2 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="card">
+		<div class="card border-warning mb-5">
 			<div class="card-header"> card header 3 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="card">
+		<div class="card border-warning mb-5">
 			<div class="card-header"> card header 4 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
 			<p>This is a paragraph</p>
@@ -83,6 +83,7 @@
 			<p>This is a paragraph</p>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 </html>
