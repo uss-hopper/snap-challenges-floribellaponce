@@ -18,7 +18,46 @@
 <body>
 <div class="container">
 	<div class="row">
-		<div class="card">
+		<div class="col-lg-3" class="col-xs-1" class="card">
+			<div class="card-header"> card header 1 </div>
+			<div class="card-body">
+				<p class="card-text">This is the card text</p>
+			</div>
+		</div>
+		<div class="col-lg-3" class="col-xs-1" class="card">
+			<div class="card-header"> card header 2 </div>
+			<div class="card-body">
+				<p class="card-text">This is the card text</p>
+			</div>
+		</div>
+		<div class="col-lg-3" class="col-xs-1" class="card">
+			<div class="card-header"> card header 3 </div>
+			<div class="card-body">
+				<p class="card-text">This is the card text</p>
+			</div>
+		</div>
+		<div class="col-lg-3" class="col-xs-1" class="card">
+			<div class="card-header"> card header 4 </div>
+			<div class="card-body">
+				<p class="card-text">This is the card text</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<p>This is a paragraph</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<p>This is a paragraph</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4">
+			<p>This is a paragraph</p>
 		</div>
 	</div>
 </div>
