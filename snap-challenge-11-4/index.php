@@ -17,57 +17,69 @@
 </head>
 <body>
 <div>
-	<div class="dropdown">
-		<button>Home</button>
-		<button type="button" class="btn btn-link">Link</button>
-		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Dropdown </button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			<a class="dropdown-item" href="#">Option 1</a>
-			<a class="dropdown-item" href="#">Option 2</a>
-			<a class="dropdown-item" href="#">Option 3</a>
+	<div>
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="#"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto" >
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Option 1</a>
+						<a class="dropdown-item" href="#">Option 2</a>
+						<a class="dropdown-item" href="#">Option 3</a>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3" class="col-xs-1" class="card">
+		<div class="col-lg-3" class="card" >
 			<div class="card-header"> card header 1 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="col-xs-1" class="card">
+		<div class="col-lg-3" class="card">
 			<div class="card-header"> card header 2 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="col-xs-1" class="card">
+		<div class="col-lg-3" class="card">
 			<div class="card-header"> card header 3 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
-		<div class="col-lg-3" class="col-xs-1" class="card">
+		<div class="col-lg-3" class="card">
 			<div class="card-header"> card header 4 </div>
 			<div class="card-body">
 				<p class="card-text">This is the card text</p>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="container">
 	<div class="row">
-		<div class="col-lg-4">
-			This is a paragraph
+		<div class="col-md-4">
+			<p>This is a paragraph</p>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-4">
-			This is a paragraph
+		<div class="col-md-4">
+			<p>This is a paragraph</p>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-4">
+		<div class="col-md-4">
 			<p>This is a paragraph</p>
 		</div>
 	</div>
