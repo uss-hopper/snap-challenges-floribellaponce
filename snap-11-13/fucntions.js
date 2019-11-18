@@ -1,4 +1,4 @@
-user = [
+const user = [
 	{
 		"id": 1,
 		"name": "Leanne Graham",
@@ -231,7 +231,15 @@ user = [
 	}
 ]
 
-
+// function using map method that removes company index from the array
 user.map( user => delete user.company);
-
 console.log(user);
+
+/*
+//function using map method that select a specific index in each object
+ const newArray = user.map(user => user.company);
+ console.log(newArray);
+*/
+
+
+
