@@ -7,6 +7,10 @@ const paragraph = " Babyface! Your shields were failing, sir. This should be int
 
 // establishing new function to filter out words that start with the same letter
 const newParagraph = paragraph.split(' ').filter(word => word.toLowerCase()[0] !='e').join(' ');
+/*
+"" > every single word
+" " > every single string
+*/
 
 //display new function
 console.log(newParagraph);
